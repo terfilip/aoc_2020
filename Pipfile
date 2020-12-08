@@ -6,6 +6,12 @@ name = "pypi"
 [packages]
 numpy = "*"
 ipython = "*"
+networkx = "*"
+matplotlib = "*"
+scipy = "*"
+jupyter = "*"
+jupyterlab = "*"
+pandas = "*"
 
 [dev-packages]
 
