@@ -7,7 +7,6 @@ with open('9.txt', 'r') as f:
 
 
 def two_sum(nums, tgt):
-
     idx = {}
 
     for i, num in enumerate(nums):
@@ -17,7 +16,6 @@ def two_sum(nums, tgt):
             return j, i
         else:
             idx[num] = i
-    
     raise ValueError("Answer not found")
 
 
@@ -32,15 +30,12 @@ def find_fst_invalid():
             ii, jj = two_sum(arr_slice, arr[i])
         except ValueError:
             return arr[i]
-        
         i += 1
-    
     raise ValueError("No invalid numbers")
 
 
 def srs(nums, tgt):
     # sub range sum
-
     rng_sz = 4
 
     while rng_sz < len(nums):
@@ -51,11 +46,8 @@ def srs(nums, tgt):
 
             if sum(ss) == tgt:
                 return ss
-
             i += 1
-        
         rng_sz += 1
-
 
 fst_invalid = find_fst_invalid()
 print('P1: ', fst_invalid)
