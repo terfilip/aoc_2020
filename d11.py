@@ -21,14 +21,14 @@ def get_adjacent_seat(grid, i, j):
 def get_adjacent_seats(grid, i, j):
 
     coords = (
-        (j - 1, i - 1),
-        (j - 1, i),
-        (j - 1, i + 1),
-        (j, i - 1),
-        (j, i + 1),
-        (j + 1, i - 1),
-        (j + 1, i),
-        (j + 1, i + 1)
+        (i - 1, j - 1),
+        (i - 1, j),
+        (i - 1, j + 1),
+        (i, j - 1),
+        (i, j + 1),
+        (i + 1, j - 1),
+        (i + 1, j),
+        (i + 1, j + 1)
     )
 
     seats = (get_adjacent_seat(grid, *coord) for coord in coords)
@@ -54,13 +54,13 @@ def fill(grid):
 
     while True:
         fst = False
-
+        
         for i, row in enumerate(grid_prev):
             for j, val in enumerate(row):
                 if val == '.':
                     continue
 
-                n_adj_occ_seats = count_occupied_seats(list(get_adjacent_seats(grid_prev, i, j)))
+                n_adj_occ_seats = len([s for s in get_adjacent_seats(grid_prev, i, j) if s == '#']) #count_occupied_seats(list(get_adjacent_seats(grid_prev, i, j)))
 
                 if val == 'L' and n_adj_occ_seats == 0:
                     grid_now[i][j] = '#'
@@ -76,7 +76,7 @@ def fill(grid):
     return None
 
                 
-
+print('P1: ', count_occupied_seats(fill(grid)))
 
 
 
