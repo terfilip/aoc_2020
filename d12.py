@@ -1,4 +1,5 @@
-def read_instr(fname):
+
+            def read_instr(fname):
     with open(fname, 'r') as f:
         return [(i[0], int(i[1:])) for i in f.readlines()]
 

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f8774737d3a3574a01bb464e6036d63d6c7a508807ec38aac909e8cec2d2bd00"
+            "sha256": "e09a916518faf7cd6effbe42a905e369bb3dd61b1b0b0c4ea62605e69450091f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -159,10 +159,10 @@
         },
         "ipykernel": {
             "hashes": [
-                "sha256:9b2652af1607986a1b231c62302d070bc0534f564c393a5d9d130db9abbbe89d",
-                "sha256:d6fbba26dba3cebd411382bc484f7bc2caa98427ae0ddb4ab37fe8bfeb5c7dd3"
+                "sha256:63b4b96c513e1138874934e3e783a8e5e13c02b9036e37107bfe042ac8955005",
+                "sha256:e20ceb7e52cb4d250452e1230be76e0b2323f33bd46c6b2bc7abb6601740e182"
             ],
-            "version": "==5.3.4"
+            "version": "==5.4.2"
         },
         "ipython": {
             "hashes": [
@@ -170,6 +170,7 @@
                 "sha256:cbb2ef3d5961d44e6a963b9817d4ea4e1fa2eb589c371a470fed14d8d40cbd6a"
             ],
             "index": "pypi",
+            "markers": "python_version >= '3.3'",
             "version": "==7.19.0"
         },
         "ipython-genutils": {
@@ -379,6 +380,12 @@
             ],
             "version": "==0.8.4"
         },
+        "mpmath": {
+            "hashes": [
+                "sha256:fc17abe05fbab3382b61a123c398508183406fa132e0223874578e20946499f6"
+            ],
+            "version": "==1.1.0"
+        },
         "nbclient": {
             "hashes": [
                 "sha256:01e2d726d16eaf2cde6db74a87e2451453547e8832d142f73f72fddcd4fe0250",
@@ -464,10 +471,10 @@
         },
         "packaging": {
             "hashes": [
-                "sha256:05af3bb85d320377db281cf254ab050e1a7ebcbf5410685a9a407e18a1f81236",
-                "sha256:eb41423378682dadb7166144a4926e443093863024de508ca5c9737d6bc08376"
+                "sha256:24e0da08660a87484d1602c30bb4902d74816b6985b93de36926f5bc95741858",
+                "sha256:78598185a7008a470d64526a8059de9aaa449238f280fc9eb6b13ba6c4109093"
             ],
-            "version": "==20.7"
+            "version": "==20.8"
         },
         "pandas": {
             "hashes": [
@@ -721,6 +728,14 @@
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
             "version": "==1.15.0"
+        },
+        "sympy": {
+            "hashes": [
+                "sha256:a3de9261e97535b83bb8607b0da2c7d03126650fafea2b2789657b229c246b2e",
+                "sha256:c986df98babfb9f5ddea49ba7b69398f6d1cfada5ae0dc0431691cddaff851f6"
+            ],
+            "index": "pypi",
+            "version": "==1.7.1"
         },
         "terminado": {
             "hashes": [

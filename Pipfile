@@ -12,6 +12,7 @@ scipy = "*"
 jupyter = "*"
 jupyterlab = "*"
 pandas = "*"
+sympy = "*"
 
 [dev-packages]
 
