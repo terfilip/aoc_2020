@@ -1,10 +1,12 @@
 import numpy as np
 import itertools
 
+
 def read_in(fname):
 
     with open(fname, 'r') as f:
         return np.array([list(l.strip()) for l in f.readlines()])
+ 
 
 def init_space(input_grid, ndim=3):
     NLAYERS = 20 if ndim == 3 else 30
@@ -58,7 +60,6 @@ def one_cycle(space, ndim):
     neighco = lambda xcoords: [tuple(ncc) for ncc in (neighdiff + xcoords) 
                                if (all(ncc > -1) and all(ncc < np.array(space.shape)))]
     get_neigh_vals = lambda xcoords, nghc: [space[ncc] for ncc in nghc]
-    
     active_coords = np.vstack(np.where(space == '#')).transpose()
     neigh_to_active_coords = set()
     
@@ -87,18 +88,13 @@ def one_cycle(space, ndim):
     return next_space
 
 
-
 def run_cycles(space, ndim):
-    
     next_space = space
     
     for i in range(6):
         next_space = one_cycle(next_space, ndim)
         print('\tCycle ', i, ' done')
-
-    
     nactive = np.where(next_space == '#')[0].size
-    
     return nactive, next_space
 
 input_grid = read_in('17.txt')
