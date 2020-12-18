@@ -18,13 +18,7 @@ class Node:
         self.left = left
         self.right = right
         self.root = root
-
-        try:
-            self.root_val = self.opdict[root](left,right)
-        except TypeError:
-            print(left)
-            print(right)
-            raise
+        self.root_val = self.opdict[root](left,right)
 
     def __repr__(self):
         s = f"Node(({self.root}), {self.left}, {self.right})"
